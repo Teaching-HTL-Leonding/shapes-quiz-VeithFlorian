@@ -9,24 +9,29 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="TextBlock">
-            <Setter Property="Foreground" Value="Green"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
         </Style>
         <Style TargetType="TextBox">
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="18"/>
             <Setter Property="Margin" Value="10"/>
         </Style>
         <Style TargetType="Button">
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="18"/>
             <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5,0,5,0"/>
         </Style>
         <Style TargetType="DataGrid">
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="18"/>
             <Setter Property="Margin" Value="10"/>
         </Style>
         <Style TargetType="ComboBox">
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="18"/>
             <Setter Property="Margin" Value="10"/>
         </Style>
 
@@ -56,7 +61,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         
-                        <TextBlock Grid.Column="0" Text="{Binding Path=Name}"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Path=Name}"  HorizontalAlignment="Right" Style="{StaticResource ResourceKey={x:Type TextBlock}}"/>
                         <TextBox Grid.Column="1" Text="{Binding Path=Length}"/>
                     </Grid>
                 </DataTemplate>
@@ -71,7 +76,7 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <Button Grid.Column="0" Grid.Row="2" MinWidth="100" Width="Auto" HorizontalAlignment="Center" Click="OnAddShape">Hinzufügen</Button>
+        <Button Grid.Column="0" Grid.Row="2" Width="Auto" HorizontalAlignment="Center" Click="OnAddShape">Hinzufügen</Button>
         
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="Gesamtfläche: "/>
